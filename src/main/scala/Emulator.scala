@@ -1,6 +1,6 @@
 import java.net.URL
-import sys.process._
-import scala.util.chaining._
+import scala.sys.process.*
+import scala.util.chaining.*
 
 object Emulator {
   def sendMessage(message: String): Unit =
@@ -8,6 +8,7 @@ object Emulator {
     Command.apply(message)
     Command.apply(1330, 1840)
     Command.apply(100, 180)
+    println("[EMU] Message sent successfully: " + message.take(40) + "...")
 }
 
 object Command {
