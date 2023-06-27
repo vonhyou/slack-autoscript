@@ -12,7 +12,7 @@ object SlackBot {
 
     if response.isOk then
       val message: Message = response.getMessage
-      println("Message sent successfully: " + message)
+      println("Message sent successfully: " + message.getText)
     else
       println("Error sending message: " + response.getError)
 }
